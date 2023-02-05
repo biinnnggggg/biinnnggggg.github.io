@@ -1,7 +1,25 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Home | Chin Zhe Ning
+---
+
+{% for post in site.posts %}
+    <div class="post">
+        <a class="post-link" href="{{ post.url }}">
+            <div>
+                {{ post.date | date: "%b" }}
+                <span>{{ post.date | date: "%e" }}</span>
+                ,
+                <span>{{ post.date | date: "%Y" }}</span>
+                •
+                <span>{{ post.length }}</span>
+                min. read   
+            </div>
+
+            <h2>{{ post.title }}</h2>
+            <p>
+                {{ post.desc }}
+            </p>
+        </a>
+    </div>
+{% endfor %}

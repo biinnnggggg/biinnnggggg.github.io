@@ -1,0 +1,11 @@
+# basic options
+title: Zhe Ning's blog
+email:
+description: ""
+twitter_username: ""
+github_username: 
+
+#Build settings
+markdown: kramdown
+theme:
+plugins:
